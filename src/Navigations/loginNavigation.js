@@ -5,6 +5,7 @@ import Login from '../screens/login';
 import HomeNavigations from './homeNavigations';
 const LoginNavigations=()=>
 {
+  console.log(":")
     const Stack = createNativeStackNavigator();
     return(    <Stack.Navigator>
     <Stack.Screen name="Login" component={Login} />

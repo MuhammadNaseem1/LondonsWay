@@ -6,9 +6,16 @@ import HomeNavigations from './homeNavigations';
 const LoginNavigations=()=>
 {
     const Stack = createNativeStackNavigator();
-    return(    <Stack.Navigator>
-    <Stack.Screen name="Login" component={Login} />
-    <Stack.Screen name="Home" component={HomeNavigations} />
+    return(  
+        <Stack.Navigator
+        initialRouteName={Login}
+        screenOptions={{
+          headerMode: 'screen',
+          headerStyle: {},
+        }}
+    >
+    <Stack.Screen name="Login" component={Login} options={{ headerShown: false  }}  />
+    <Stack.Screen name="Home" component={HomeNavigations}  />
     {/* <Stack.Screen name="Home" component={ScreenComponent2} /> */}
   </Stack.Navigator>)
 

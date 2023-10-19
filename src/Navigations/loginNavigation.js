@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../screens/home';
 import Login from '../screens/login';
 import HomeNavigations from './homeNavigations';
+import PaymentScreen from '../screens/paymentScreen';
 const LoginNavigations=()=>
 {
     const Stack = createNativeStackNavigator();
@@ -16,7 +17,8 @@ const LoginNavigations=()=>
     >
     <Stack.Screen name="Login" component={Login} options={{ headerShown: false  }}  />
     <Stack.Screen name="Home" component={Home} options={{ headerShown: false  }}  />
-    {/* <Stack.Screen name="Home" component={ScreenComponent2} /> */}
+    <Stack.Screen name="PaymentScreen" component={PaymentScreen} options={{ headerShown: false  }}  />
+    {/* <Stack.Screen name="Home" component={HomeNavigations} options={{ headerShown: false  }}  /> */}
   </Stack.Navigator>)
 
 }

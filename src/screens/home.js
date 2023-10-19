@@ -3,8 +3,10 @@ import React from 'react'
 import AppLayout from '../ReusableComponents/appLayout'
 import CustomButton from '../ReusableComponents/customeButton'
 import { COLOR_CODES } from '../utilities/globalVariables'
+import { useNavigation } from '@react-navigation/native'
 const Home = () => {
 const {width,height}=useWindowDimensions()
+const navigation=useNavigation()
   return (
 <AppLayout headerTitle={'Home'} ScreenText={'This is Home Screen, all main functionalities will be shown here. You can access the feature as per your subscribed pay plan'}>
 <View style={{justifyContent:'center', alignItems:'center',marginVertical:height/100*20}}>
@@ -12,7 +14,7 @@ const {width,height}=useWindowDimensions()
     <CustomButton title={'Get Notification'} style={{width:width/100*50,backgroundColor:COLOR_CODES.charCoal}}/>
   </View>
   <View>
-    <CustomButton title={'Pay Online'} style={{width:width/100*50,backgroundColor:COLOR_CODES.charCoal}}/>
+    <CustomButton onPress={()=>navigation.navigate('PaymentScreen')} title={'Pay Online'} style={{width:width/100*50,backgroundColor:COLOR_CODES.charCoal}}/>
   </View>
 </View>
 </AppLayout>

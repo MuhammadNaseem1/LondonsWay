@@ -15,7 +15,7 @@ const LoginNavigations=()=>
         }}
     >
     <Stack.Screen name="Login" component={Login} options={{ headerShown: false  }}  />
-    <Stack.Screen name="Home" component={HomeNavigations}  />
+    <Stack.Screen name="Home" component={Home} options={{ headerShown: false  }}  />
     {/* <Stack.Screen name="Home" component={ScreenComponent2} /> */}
   </Stack.Navigator>)
 

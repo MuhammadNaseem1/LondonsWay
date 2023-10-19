@@ -1,11 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,useWindowDimensions } from 'react-native'
 import React from 'react'
-
+import AppLayout from '../ReusableComponents/appLayout'
+import CustomButton from '../ReusableComponents/customeButton'
+import { COLOR_CODES } from '../utilities/globalVariables'
 const Home = () => {
+const {width,height}=useWindowDimensions()
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+<AppLayout headerTitle={'Home'} ScreenText={'This is Home Screen, all main functionalities will be shown here. You can access the feature as per your subscribed pay plan'}>
+<View style={{justifyContent:'center', alignItems:'center',marginVertical:height/100*20}}>
+  <View style={{marginVertical:height/100*5}}>
+    <CustomButton title={'Get Notification'} style={{width:width/100*50,backgroundColor:COLOR_CODES.charCoal}}/>
+  </View>
+  <View>
+    <CustomButton title={'Pay Online'} style={{width:width/100*50,backgroundColor:COLOR_CODES.charCoal}}/>
+  </View>
+</View>
+</AppLayout>
   )
 }
 

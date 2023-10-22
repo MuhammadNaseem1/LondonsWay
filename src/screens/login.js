@@ -1,4 +1,4 @@
-import {View, Text,ScrollView,TextInput,useWindowDimensions} from 'react-native';
+import {View, Text,ScrollView,TextInput,useWindowDimensions,TouchableHighlight} from 'react-native';
 import CustomTextInput from '../ReusableComponents/customisedTextInputComponnet';
 import {useState} from 'react'
 import AppLayout from '../ReusableComponents/appLayout';
@@ -55,12 +55,12 @@ const Login = () => {
           <View style={{marginVertical:height/100*2}}>
               <CustomButton onPress={()=>navigation.navigate('Home')} title={'Login'} style={{backgroundColor:COLOR_CODES.charCoal,width:width/100*50}}/>
           </View>
-          <View>
+          <TouchableHighlight onPress={()=>navigation.navigate('Register')}>
             <Text style={{ textDecorationLine:'underline',
     textDecorationColor: 'blue'}}>
               Register
             </Text>
-          </View>
+          </TouchableHighlight>
           </View>
         
           </View>     
